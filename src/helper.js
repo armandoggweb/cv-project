@@ -1,65 +1,39 @@
-const format = () => {
-
-  return (
-    {
-      name: '',
-      email: '',
-      phone: '',
-      studies: [],
-      experience: []
-    }
-  );
-}
-const studiesFormat = (data, index) => {
-  console.log(data)
-  return (
-    {
-      school: `${getData(data.school)}`,
-      titleStudy: `${getData(data.titleStudy)}`,
-      dateStudy: `${getData(data.dateStudy)}`
-    }
-  );
-}
-const ttt = (data) =>{
-  
-  for (const props in data){
-
-
+const format = (data, name) => {
+  if (name === 'personal') {
+    const { userName, email, phone } = data;
+    return ({
+      userName: userName.value,
+      email: email.value,
+      phone: phone.value,
+      submitted: true
+    });
+  } else if (name === 'studies') {
+    const { school, titleStudy, dateStudy } = data;
+    return ({
+      school: school.value,
+      titleStudy: titleStudy.value,
+      dateStudy: dateStudy.value,
+      submitted: true
+    });
+  } else if (name === 'experience') {
+    const { company, position, tasks, startDate, endDate } = data;
+    return ({
+      company: company.value,
+      position: position.value,
+      tasks: getData(tasks),
+      startDate: startDate.value,
+      endDate: endDate.value,
+      submitted: true
+    });
   }
 }
-const formData = (data) => {
-  return (
-    {
-      name: data.name.value,
-      email: data.email.value,
-      phone: data.phone.value,
-      studies: [{
-        school: data.school.value,
-        titleStudy: data.titleStudy.value,
-        dateStudy: data.dateStudy.value
-      }],
-      experience: [{
-        company: data.company.value,
-        position: data.position.value,
-        tasks: `${getData(data.tasks)}`,
-        startDate: data.startDate.value,
-        endDate: data.endDate.value
-      }]
-    }
-  );
-}
-const setMultipleField = (data) => {
-  Object.entries(data).map((field, value) => {
 
-  })
-}
 const getData = (data) => {
-  console.log(typeof data)
-
-  if(typeof data === 'object'){
-    return Object.values(data).map((field) => field.value);
-  }else{
-    return data.value;
+  if (typeof data === 'object') {
+    const inputs = Object.values(data).filter((input) => input.value && input.value !== '');
+    return inputs.map((input) => input.value);
+  } else {
+    return [];
   }
 }
-export { format, studiesFormat, getData };
+export { format };
