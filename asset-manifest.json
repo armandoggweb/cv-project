@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/cv-project/static/css/main.6a1fc662.chunk.css",
+    "main.js": "/cv-project/static/js/main.c89c5c63.chunk.js",
+    "main.js.map": "/cv-project/static/js/main.c89c5c63.chunk.js.map",
+    "runtime-main.js": "/cv-project/static/js/runtime-main.e0af79ca.js",
+    "runtime-main.js.map": "/cv-project/static/js/runtime-main.e0af79ca.js.map",
+    "static/js/2.6f14f152.chunk.js": "/cv-project/static/js/2.6f14f152.chunk.js",
+    "static/js/2.6f14f152.chunk.js.map": "/cv-project/static/js/2.6f14f152.chunk.js.map",
+    "index.html": "/cv-project/index.html",
+    "static/css/main.6a1fc662.chunk.css.map": "/cv-project/static/css/main.6a1fc662.chunk.css.map",
+    "static/js/2.6f14f152.chunk.js.LICENSE.txt": "/cv-project/static/js/2.6f14f152.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/cv-project/static/media/remove_circle_outline-white-18dp.05cbe822.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e0af79ca.js",
+    "static/js/2.6f14f152.chunk.js",
+    "static/css/main.6a1fc662.chunk.css",
+    "static/js/main.c89c5c63.chunk.js"
+  ]
+}
