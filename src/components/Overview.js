@@ -10,7 +10,7 @@ export default class Overview extends React.Component {
       const { userName, email, phone } = data;
       return (
         <div>
-          <p><span className="field">Nombre:</span> {userName}</p>
+          <p><span className="field">Name:</span> {userName}</p>
           <p><span className="field">Email address:</span> {email}</p>
           <p><span className="field">Phone number:</span> {phone}</p>
         </div>
@@ -18,7 +18,7 @@ export default class Overview extends React.Component {
     } else if (type === 'studies') {
       const { school, titleStudy, dateStudy } = data;
       return (
-        <div>
+        <div className="render-info">
           <p><span className="field">Date of study:</span> {dateStudy}</p>
           <p><span className="field">School:</span> {school}</p>
           <p><span className="field">Title of study:</span> {titleStudy}</p>
@@ -26,12 +26,12 @@ export default class Overview extends React.Component {
     } else if (type === 'experience') {
       const { company, position, tasks, startDate, endDate } = data;
       return (
-        <div>
+        <div className="render-info">
           <p><span className="field">From:</span> {startDate} <span className="field">Until:</span> {endDate}</p>
           <p><span className="field">Company:</span> {company}</p>
           <p><span className="field">Position:</span> {position}</p>
           <p><span className="field">Tasks:</span> </p>
-          <ul>
+          <ul className="render-expand-list">
             {tasks.map((e) => <li key={uniqid()}>{e}</li>)}
           </ul>
           

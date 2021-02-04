@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #c2c2c2;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -15,22 +16,112 @@ code {
 .container {
   width: 600px;
   margin: 0 auto;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.forms-list {
+  margin: 5px auto;
+  padding: 10px;
+  width: 580px;
+  border: lightgrey 1px solid;
+  border-radius: 3px;;
+  background-color: #f5f5f5;
+}
+.list-element {
+  padding: 3px 0px;
 }
 
+.expand-list {
+  margin-left: 150px;
+}
+.render-expand-list{
+  padding: 10px;
+  border: solid 1px lightgray;
+  border-radius: 3px;
+}
+.render-info, .list-element{
+  margin: 5px 0;;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 3px;
+}
 input {
-  margin-left: 3px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
 }
-label {
-  width: 150px;
-}
+
 p {
-  margin: 2px 0px;
+  margin: 3px 0px;
+}
+ul {
+  margin: 0;
+  padding: 0;
 }
 li {
   list-style: none;
 }
-.field {
+.field,
+label {
   display: inline-block;
   width: 150px;
   font-weight: bold;
+}
+.btn {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 10px;
+
+  background-size: contain;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.btn:hover,
+.btn-lg:hover {
+  border-color: black;
+  color: black;
+}
+.add {
+  background: url(./icons/add_circle_outline-white-18dp.svg) no-repeat
+    rgb(95, 187, 95);
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.edit {
+  background: url(./icons/mode_edit-white-18dp.svg) no-repeat lightskyblue;
+  background-size: cover;
+}
+
+.remove {
+  display: inline-block;
+  background: url(./icons/remove_circle_outline-white-18dp.svg) no-repeat rgb(204, 66, 66);
+  background-size: cover;
+}
+
+.btn-lg {
+  display: inline-block;
+  width: 100px;
+  height: 25px;
+  border: white 1px solid;
+  border-radius: 5px;
+  background-color: rgb(182, 99, 182);
+  font-weight: bold;
+  color: white;
+}
+
+.vertical-center{
+  display: flex;
+}
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* show a hand cursor on hover; some argue that we
+  should keep the default arrow cursor for buttons */
+  cursor: pointer;
 }
